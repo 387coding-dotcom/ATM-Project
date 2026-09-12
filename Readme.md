@@ -1,6 +1,6 @@
 # ATM Management System
 
-A simple **terminal-based ATM Management System** developed in Java.  
+A simple **terminal-based ATM Management System** developed in Python.  
 The project demonstrates the basic working of an ATM through a command-line interface.
 
 ## 📌 About the Project
@@ -8,7 +8,7 @@ The project demonstrates the basic working of an ATM through a command-line inte
 This project simulates common ATM operations through a terminal program.  
 The user can interact with the system by selecting options from a menu and entering the required information.
 
-It is designed as a beginner-friendly project to understand **Java programming, conditional statements, loops, methods, user input, and basic program logic**.
+It is designed as a beginner-friendly project to understand **Python programming, conditional statements, loops, functions, user input, and basic program logic**.
 
 ## ✨ Features
 
@@ -22,10 +22,13 @@ It is designed as a beginner-friendly project to understand **Java programming, 
 
 ## 🛠️ Technologies Used
 
-- **Java**
-- **Java Scanner** – for taking user input
-- **Command Line / Terminal** – for interacting with the program
+- **Python**
+- **Python `input()`** – for taking user input
+- **Conditional statements** – for decision making
+- **Loops** – for maintaining the ATM menu
+- **Variables and arithmetic operations** – for balance management
 - **Git & GitHub** – for version control and project management
+- **Command Line / Terminal** – for interacting with the program
 
 ## 💻 How It Works
 
