@@ -2,12 +2,24 @@
 initial_am= 1000
 cor_pin= 3807
 print("---------ATM Management System-----------")
-pin=int(input("Enter Your PIN: "))
-#Adding conhdition to lock account after three unhsuccessful attempts
-if pin==cor_pin:
-    print("\n Login Successful!")
+# Allow the user 3 attempts to enter the correct PIN
+for attempt in range(3):
+    pin = int(input("Enter Your PIN: "))
 
-    while True:
+    if pin == cor_pin:
+        print("\nLogin Successful!")
+        break
+    else:
+        if attempt == 0:
+            print("You have 2 attempts remaining.")
+        elif attempt == 1:
+            print("You have 1 attempt remaining.")
+        elif attempt == 2:
+            print("\nToo many incorrect attempts!")
+            print("ATM is locked. Please try again later.")
+            exit()
+                       
+while True:
         print("\n----ATM MENU----")
         print("1. Check Balance") 
         print("2. Deposit Amount") 
@@ -58,4 +70,4 @@ if pin==cor_pin:
 else:
     print("Invalide PIN")
             
-            
+                                   
