@@ -1,5 +1,5 @@
 #Creating the list and variables
-balance= 1000
+initial_am= 1000
 cor_pin= 3807
 print("---------ATM Management System-----------")
 pin=int(input("Enter Your PIN: "))
@@ -18,13 +18,13 @@ if pin==cor_pin:
         choice=int(input("Enter Your Choice: "))
         
         if choice == 1:
-            print("Your balance is: ",balance)
+            print("Your balance is: ",initial_am)
         
         elif choice == 2:
             amount1=float(input("Enter the amount to deposit: "))
             
             if amount1> 0:
-                balance+=amount1
+                balance=amount1+initial_am
                 print("Amount deposited successfully.")
                 print("Updated balance:", balance)
             else:
@@ -42,9 +42,10 @@ if pin==cor_pin:
                 
         elif choice == 4:
          print("--Transaction History---------")
+         print("Initial balance:",initial_am)
          print("Amount deposited",amount1)
          print("Amount Witdrawn", amount2)
-         print("Your balance is: ",balance)
+         print("Updated Balance:",balance )
          print("Thanhk You")
         
         elif choice == 5:
