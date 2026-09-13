@@ -1,6 +1,7 @@
 #Creating the list and variables
 initial_am= 1000
 cor_pin= 3807
+transaction_history=[]
 print("---------ATM Management System-----------")
 # Allow the user 3 attempts to enter the correct PIN
 for attempt in range(3):
@@ -38,7 +39,7 @@ while True:
             if amount1> 0:
                 balance=amount1+initial_am
                 print("Amount deposited successfully.")
-                print("Updated balance:", balance)
+                transaction_history.append(f"Amount deposited:{amount1}")
             else:
                 print("Invalid Amount")
             
@@ -50,15 +51,11 @@ while True:
             else:
                 balance-=amount2
                 print("Amount Witdrawn Successfully!")
-                print("Updated Balance", balance)
+                transaction_history.append(f"Amount credited:{amount2}")
                 
         elif choice == 4:
-         print("--Transaction History---------")
-         print("Initial balance:",initial_am)
-         print("Amount deposited",amount1)
-         print("Amount Witdrawn", amount2)
-         print("Updated Balance:",balance )
-         print("Thanhk You")
+                print(transaction_history)
+                print("Thanhk You")
         
         elif choice == 5:
             print("Thank you for working with our bank")
